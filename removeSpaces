@@ -1,0 +1,6 @@
+Remove_spaces()
+  {
+     File1=$1
+     File2=`echo "$File1" | tr ' ' ''` 
+     mv "$File1"  "$File2"
+  }

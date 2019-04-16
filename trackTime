@@ -1,0 +1,41 @@
+
+Var=$(logname)
+Date=$(date "+%D")
+
+if ($Course -eq 1)
+then Course="Data structures"
+fi
+if ($Course -eq 2)
+ then Course="Info sec"
+fi 
+if ($Course -eq 3)
+ then Course="Linux"
+fi
+if ($Course -eq 4)
+ then Course="Seminar"
+fi
+if ($Course -eq 5)
+ then Course="Bitcoin and Cryptocurrency"
+fi
+if ($Course -eq 6)
+ then Course="Pi Fun"
+fi
+if ($Course -eq 7)
+ then Course="Digital Strategic"
+fi
+if ($Course -eq 8)
+ then Course="Data analytics"
+fi
+
+while true;
+do
+   read -p "Enter the course 1 to 8:" Course
+   read -p "Enter the number of hours to work on $Course $Var:" Hour
+  [[ -z $Hour ]] && break
+  
+Sum=$(($Sum+$Hour))
+
+done
+
+echo "On $Date You have worked on $1 for $Sum" >> /home/jmukamisha/cmd/{track}_$Course
+

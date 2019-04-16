@@ -1,0 +1,7 @@
+
+echo"arg2 is" $1
+echo"arg3 is" $2
+echo"arg1 is" $3
+
+FILE =$1
+

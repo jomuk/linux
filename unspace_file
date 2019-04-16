@@ -1,0 +1,12 @@
+. jocelyne_funcs
+#set -x
+if [ -d "$1" ]
+  then
+	   VAR="`find ./ | grep \" \"| head -1`"
+	   for V in "$VAR"
+	   do
+	   FILE=`echo "$V" | tr -d [:space:]`
+	   #mv "$VAR" "$FILE" 
+	   done
+	   
+fi

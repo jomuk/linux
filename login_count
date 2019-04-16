@@ -1,0 +1,4 @@
+
+File=`who | wc -l`
+echo "There are currently "$File" users logged in | `date`"
+

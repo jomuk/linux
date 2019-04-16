@@ -1,0 +1,34 @@
+#set -x
+Var=$(logname)
+Date=$(date "+%D")
+a=1
+b=2
+track=track
+
+while true;
+do
+   read -p "Enter the course 1 to 8:" Course
+   echo $Course
+
+if [ "$Course" == "$a" ] 
+then 
+   Course1="Data_structures"
+fi
+
+if [ "$Course" == "$b" ]
+then 
+   Course1="Digital_Strategic"
+fi
+   
+   read -p "Enter the number of hours to work on $Course1 $Var:" Hour
+   touch /home/jmukamisha/cmd/$track$Course1 
+   echo "On $Date $Var have worked on $Course1 for $Sum hours" >> /home/jmukamisha/cmd/"$track$Course1"
+   
+   [[ -z $Hour ]] && break 
+
+    Sum=$(($Sum+$Hour))
+done
+
+#touch /home/jmukamisha/cmd/$track$Course1 
+#echo "On $Date $Var have worked on $Course1 for $Sum hours" >> /home/jmukamisha/cmd/"$track$Course1"
+

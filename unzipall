@@ -1,0 +1,35 @@
+set -x
+
+for ZFILE in "$@"
+
+do 
+
+STRING1=hw
+
+NUMBER=`echo "$ZFILE" | sed -e 's/[^0-9]//g'`
+
+HOMEWORK="$STRING1$NUMBER"
+
+ANDREWID=`echo $ZFILE | cut -d "_" -f 1`
+
+mkdir /home/jmukamisha/$HOMEWORK
+
+cd /home/jmukamisha/$HOMEWORK	
+
+mkdir $ANDREWID
+
+#ZPDIR=echo /home/jmukamisha/$HOMEWORK/$ANDREWID
+
+cd /home/jmukamisha/$HOMEWORK/$ANDREWID
+
+touch $1
+
+unzip $1 -d .
+
+mkdir zips
+
+cd /home/jmukamisha/$HOMEWORK/$ANDREWID/zips
+
+#mv /home/jmukamisha/$HOMEWORK/$ANDREWID  /home/jmukamisha/$HOMEWORK/$ANDREWID/zips
+
+done

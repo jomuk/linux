@@ -1,0 +1,7 @@
+. jocelyne_funcs
+
+BACKUPTIME=`date +%b-%d-%y`
+DESTINATIONFILE=/home/jmukamisha/backup$BACKUPTIME
+ORIGINALFILE=/home/jmukamisha/cmd
+tar -cpzf $DESTINATIONFILE $ORIGINALFILE
+

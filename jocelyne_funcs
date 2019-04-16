@@ -1,0 +1,25 @@
+echo "Setup functions by Jocelyne Mukamisha"
+
+uncap()
+{
+Var1=$1
+Var2=`echo $Var1 | tr '[:upper:]' '[:lower:]'`
+mv "$Var1" "$Var2"
+}
+
+removeSpaces()
+{
+ if [ $# -eq 1 ]
+ then
+    File1="$1"
+    File2=`echo $File1 | tr -d '[:space:]'`
+ fi 
+
+ if [ $# -gt 1 ]
+ then
+    File1=$1
+    File2=`echo $File1 | tr '[:space:]' "$2"`
+ fi
+ mv "$File1" "$File2"
+}
+

@@ -1,0 +1,10 @@
+source jocelyne_funcs
+if [ $# -gt 1 ]
+then
+removeSpaces "$1" "$2"
+fi
+
+if [ $# -eq 1 ]
+then
+removeSpaces "$1"
+fi

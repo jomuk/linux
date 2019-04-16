@@ -1,0 +1,10 @@
+. jocelyne_funcs
+set -x
+PASSEDIN=$1
+if [[ -d $PASSEDIN ]]
+then
+   echo "hello"
+   array=( $(find ./ | grep " ") )
+   echo ${array[@]}
+
+fi

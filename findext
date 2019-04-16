@@ -1,0 +1,9 @@
+VAR=$1 
+
+if [[ $VAR == .* ]]
+then 
+VAR=`echo $VAR | sed 's/^\.//'`
+# find . -name *.$VAR1
+fi
+
+find . -name *.$VAR

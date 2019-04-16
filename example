@@ -1,0 +1,7 @@
+set -x
+
+for i in $@
+do
+   echo "arg is " $i
+
+done
